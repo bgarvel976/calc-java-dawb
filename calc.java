@@ -32,7 +32,7 @@ public class Calc {
             case "multiplica":
                 return multiplica(num1, num2);
             case "divide":
-                return divideE(num1, num2);
+                return divide(num1, num2);
             default:
                 throw new IllegalArgumentException("Operación no soportada");
         }
@@ -45,7 +45,10 @@ public class Calc {
     public static void showResult(String operation, int result) {
         System.out.println("El resultado de la operación \"" + operation + "\" es: " + result);
     }
-    public static int divideE(int num1, int num2) {
+    public static int divide(int num1, int num2) {
     return num1 / num2;
-}
+    if (num2 == 0) {
+        throw new IllegalArgumentException("Error: No se puede dividir por cero");
+        }
+    }
 }
