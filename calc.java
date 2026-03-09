@@ -31,8 +31,16 @@ public class Calc {
         switch (operation) {
             case "multiplica":
                 return multiplica(num1, num2);
+
             case "divide":
                 return divide(num1, num2);
+
+
+            case "resta":
+                return resta(num1, num2);    
+
+            case "suma":
+                return suma(num1, num2);
             default:
                 throw new IllegalArgumentException("Operación no soportada");
         }
@@ -45,10 +53,19 @@ public class Calc {
     public static void showResult(String operation, int result) {
         System.out.println("El resultado de la operación \"" + operation + "\" es: " + result);
     }
+
     public static int divide(int num1, int num2) {
     return num1 / num2;
     if (num2 == 0) {
         throw new IllegalArgumentException("Error: No se puede dividir por cero");
         }
+    }
+
+    public static int resta(int num1, int num2) {
+    return num1 - num2;
+
+    }
+    public static int suma(int num1, int num2) {
+    return num1 + num2;
     }
 }
