@@ -31,6 +31,8 @@ public class Calc {
         switch (operation) {
             case "multiplica":
                 return multiplica(num1, num2);
+            case "divide":
+                return divideE(num1, num2);
             default:
                 throw new IllegalArgumentException("Operación no soportada");
         }
@@ -43,4 +45,7 @@ public class Calc {
     public static void showResult(String operation, int result) {
         System.out.println("El resultado de la operación \"" + operation + "\" es: " + result);
     }
+    public static int divideE(int num1, int num2) {
+    return num1 / num2;
+}
 }
